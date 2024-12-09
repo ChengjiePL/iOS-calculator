@@ -1,0 +1,32 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background: #1b1b32;
+}
+
+.mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  width: 320px;
+  height: 580px;
+  border: 2px solid white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.button-bar {
+  width: 30px;
+  height: 10px;
+  bottom: 0;
+  background: white;
+}

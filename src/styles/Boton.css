@@ -1,0 +1,46 @@
+.boton-operacion,
+.boton,
+.boton-especial {
+  width: 70px;
+  height: 70px;
+  background: #fb9c09;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin-top: 5px;
+}
+
+.boton {
+  background: #363638;
+}
+
+.boton:hover {
+  background: #363939;
+}
+
+.boton-operacion:hover {
+  background: #ffae2d;
+}
+
+.boton-operacion:active,
+.boton:active,
+.boton-especial:active {
+  scale: 0.9;
+}
+
+.container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.boton-especial {
+  background: #5d5c61;
+}
