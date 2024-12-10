@@ -1,20 +1,25 @@
 import React from "react";
 import "../styles/Boton.css";
+import { BsCalculator } from "react-icons/bs";
+import { BsPlusSlashMinus } from "react-icons/bs";
+import { CgMathEqual } from "react-icons/cg";
 
-function Boton() {
+
+function Boton({ onButtonClick }) {  // Recibe la prop
   const getTipoBoton = (valor) => {
-    if (["+", "-", "*", "/", "="].includes(valor)) {
+    if (["+", "*", "/", "=", "-"].includes(valor) || valor.type === CgMathEqual) {
       return "boton-operacion";
-    } else if (["AC", "+/-", "%"].includes(valor)) {
+    } else if (["AC", "%"].includes(valor) || valor.type === BsPlusSlashMinus) {
       return "boton-especial";
     } else {
       return "boton";
     }
   };
 
+
   const botones = [
     "AC",
-    "+/-",
+    <BsPlusSlashMinus />,
     "%",
     "/",
     "7",
@@ -29,7 +34,7 @@ function Boton() {
     "2",
     "3",
     "+",
-    "=",
+    <BsCalculator style={{ fontSize: '1.6em' }} />,
     "0",
     ".",
     "=",
@@ -38,7 +43,11 @@ function Boton() {
   return (
     <div className="container">
       {botones.map((boton, index) => (
-        <button key={index} className={getTipoBoton(boton)}>
+        <button 
+          key={index}
+          className={getTipoBoton(boton)}
+          onClick={() => onButtonClick(boton)}
+        >
           {boton}
         </button>
       ))}

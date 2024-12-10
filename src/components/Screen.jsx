@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/Screen.css";
 
-function Screen() {
+function Screen({ screen }) {
   return (
     <section>
       <div className="notch-bar"></div>
-      <div className="screen"></div>
+      <div className="screen">{screen}</div>
     </section>
   );
 }
