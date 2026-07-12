@@ -3,9 +3,9 @@
 .boton-especial {
   width: 70px;
   height: 70px;
-  background: #fb9c09;
+  background: var(--button-operation-bg);
   border-radius: 50%;
-  color: white;
+  color: var(--display-text);
   text-align: center;
   line-height: 50px;
   cursor: pointer;
@@ -16,24 +16,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .boton {
-  background: #363638;
+  background: var(--button-default-bg);
 }
 
 .boton:hover {
-  background: #363939;
+  background: var(--button-default-hover);
 }
 
 .boton-operacion:hover {
-  background: #ffae2d;
+  background: var(--button-operation-hover);
+}
+
+.boton-especial:hover {
+  background: var(--button-special-hover);
 }
 
 .boton-operacion:active,
 .boton:active,
 .boton-especial:active {
   scale: 0.9;
+}
+
+.boton-operacion:focus-visible,
+.boton:focus-visible,
+.boton-especial:focus-visible {
+  outline: 2px solid var(--button-focus-ring);
+  outline-offset: 2px;
 }
 
 .container {
@@ -45,5 +57,5 @@
 }
 
 .boton-especial {
-  background: #5d5c61;
+  background: var(--button-special-bg);
 }
