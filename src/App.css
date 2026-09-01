@@ -3,9 +3,24 @@
   margin: 0;
 }
 
+:root {
+  --app-bg: #0d1b2a;
+  --calculator-bg: #1b263b;
+  --calculator-border: #415a77;
+  --display-bg: #102a43;
+  --display-text: #f8fbff;
+  --button-default-bg: #334e68;
+  --button-default-hover: #486581;
+  --button-special-bg: #526d82;
+  --button-special-hover: #627d98;
+  --button-operation-bg: #ef8354;
+  --button-operation-hover: #f4a261;
+  --button-focus-ring: #99e2ff;
+}
+
 html,
 body {
-  background: #1b1b32;
+  background: var(--app-bg);
 }
 
 .mobile {
@@ -13,10 +28,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: black;
+  background: var(--calculator-bg);
   width: 320px;
   height: 580px;
-  border: 4px outset gray;
+  border: 4px outset var(--calculator-border);
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -33,5 +48,5 @@ body {
   bottom: 15px; /* Ajusta la distancia desde la parte inferior */
   left: 50%; /* Centra horizontalmente */
   transform: translateX(-50%); /* Centra horizontalmente */
-  background: white; /* Cambia el color de fondo según sea necesario */
+  background: var(--display-text); /* Cambia el color de fondo según sea necesario */
 }
